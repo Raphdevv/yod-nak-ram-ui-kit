@@ -3,8 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'colors.dart';
 
-final ThemeApp themeApp = ThemeApp();
-
 class ThemeApp {
   ThemeApp._();
 
@@ -37,6 +35,38 @@ class ThemeApp {
         onError: onErrorLight,
         surface: surfaceLight,
         onSurface: onSurfaceLight,
+      ),
+      textTheme: TextTheme(
+        headlineLarge: _styleFonts(
+          fontSize: _font22,
+        ).copyWith(fontWeight: FontWeight.bold),
+        headlineMedium: _styleFonts(
+          fontSize: _font20,
+        ).copyWith(fontWeight: FontWeight.bold),
+        titleLarge: _styleFonts(
+          fontSize: _font18,
+        ).copyWith(fontWeight: FontWeight.bold),
+        titleMedium: _styleFonts(
+          fontSize: _font16,
+        ).copyWith(fontWeight: FontWeight.bold),
+        bodyLarge: _styleFonts(fontSize: _font16),
+        bodySmall: _styleFonts(fontSize: _font14),
+      ),
+    );
+  }
+
+  ThemeData darkTheme() {
+    return ThemeData(
+      colorScheme: ColorScheme(
+        brightness: Brightness.dark,
+        primary: primaryDark,
+        onPrimary: onPrimaryDark,
+        secondary: secondaryDark,
+        onSecondary: onSecondaryDark,
+        error: errorDark,
+        onError: onErrorDark,
+        surface: surfaceDark,
+        onSurface: onSurfaceDark,
       ),
       textTheme: TextTheme(
         headlineLarge: _styleFonts(

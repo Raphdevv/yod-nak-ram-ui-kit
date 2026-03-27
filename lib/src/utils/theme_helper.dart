@@ -7,6 +7,10 @@ class YodThemeApp {
   static ThemeData lightTheme() {
     return _themeApp.lightTheme();
   }
+
+  static ThemeData darkTheme() {
+    return _themeApp.darkTheme();
+  }
 }
 
 extension ThemeContext on BuildContext {
